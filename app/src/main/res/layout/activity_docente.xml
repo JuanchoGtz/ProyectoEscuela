@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".docente">
+    <TextView
+        android:id="@+id/textViewDocenteName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/madimione"
+        android:text="Bienvenido"
+        android:textSize="35dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/textViewDocenteSubject"
+        android:fontFamily="@font/madimione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewDocenteName"
+        android:text="Materia"
+        android:textSize="18sp"
+        android:textStyle="italic"/>
+
+    <TextView
+        android:id="@+id/textViewDocenteGroup"
+        android:fontFamily="@font/madimione"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewDocenteSubject"
+        android:text="Grupo"
+        android:textSize="18sp"
+        android:textStyle="italic"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewDocenteGroup"
+        android:layout_marginTop="16dp">
+
+        <TableLayout
+            android:id="@+id/tableLayoutAlumnos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Texto en la tabla"
+                    android:fontFamily="@font/madimione"
+                    android:textSize="16sp" />
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonSaveGrades"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/madimione"
+        android:layout_below="@id/tableLayoutAlumnos"
+        android:backgroundTint="#EAFF8C"
+        android:textColor="@color/black"
+        android:layout_marginTop="462dp"
+        android:text="Guardar" />
+
+</RelativeLayout>
